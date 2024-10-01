@@ -18,6 +18,9 @@ if ! [ -x "$(command -v aws)" ]; then
   exit 1
 fi
 
+# Prompt the user to enter the S3 bucket name
+read -p "Enter the S3 bucket name: " BUCKET_NAME
+
 # Parse command line options
 while getopts ":f:p:" opt; do
   case ${opt} in
@@ -63,9 +66,6 @@ fi
 
 # Get the file name from the file path to append to S3 path
 FILE_NAME=$(basename "${FILE_PATH}")
-
-# Define the S3 bucket (since it's fixed as per your requirement)
-BUCKET_NAME="cli-uploads-bucket"
 
 # Upload the file to the S3 bucket
 echo "Uploading ${FILE_PATH} to s3://${BUCKET_NAME}/${S3_PATH}${FILE_NAME}"
