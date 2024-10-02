@@ -23,6 +23,8 @@ Examples: ./uploadtos3.sh ./example.txt uploads/
 
 Please note that the script will prompt you to enter your S3 Bucket name.
 
+Additional functionality has now been added. The user will now get a shareable link that will expire in one hour.
+
 ---
 
 ## Installation
@@ -57,8 +59,7 @@ Contributions are welcome
 List any potential features or improvements you plan to add in the future:
 
 - [ ]  Feature 1: Progress bar or percentage upload completion
-- [ ]  Feature 2: Provide an option to generate and display a shareable link post-upload
-- [ ]  Feature 3: Enable file synchronization -- if the file already exists in the cloud, prompt the user to overwrite, skip, or rename
+- [ ]  Feature 2: Enable file synchronization -- if the file already exists in the cloud, prompt the user to overwrite, skip, or rename
 
 ---
 
