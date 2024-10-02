@@ -74,8 +74,12 @@ aws s3 cp "${FILE_PATH}" "s3://${BUCKET_NAME}/${S3_PATH}${FILE_NAME}"
 # Check the status of the upload
 if [ $? -eq 0 ]; then
     echo "Upload successful!"
+
+    # Generate a shareable pre-signed URL (valid for 1 hour)
+    shareable_link=$(aws s3 presign "s3://${BUCKET_NAME}/${S3_PATH}${FILE_NAME}" --expires-in 3600)
+    echo "Shareable link (valid for 1 hour):"
+    echo "$shareable_link"
 else
     echo "Error: File upload failed. Please check the AWS CLI error."
     exit 1
 fi
-
