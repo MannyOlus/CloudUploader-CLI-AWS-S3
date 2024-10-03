@@ -32,9 +32,11 @@ The tool is used as following
 
 Examples: ./uploadtos3.sh ./example.txt uploads/
 
-Please note that the script will prompt you to enter your S3 Bucket name.
+Please note that the script will prompt you to enter your S3 Bucket name. However you can also preempt this my adding the bucket into the command as follows:
 
-Additional functionality has now been added. The user will now get a shareable link that will expire in one hour.
+./upload.sh -f <files/test.txt >-b <my-s3-bucket>
+
+Additional functionality has now been added. The user will now get a shareable link that will expire in one hour and a progress bar has been added
 
 ---
 
