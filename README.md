@@ -11,7 +11,18 @@ Before you begin, ensure you have met the following requirements:
 - AWS subscription S3 bucket
 - [AWS CLI](https://aws.amazon.com/cli/) has been installed and configured for each user requiring the upload functionality
 - Assumed basic knowledge of Linux (file creation & permissions management)
+- PV tool is also installed to enable the percentage upload completion bar
 
+---
+
+## Environments and Technologies Used
+
+- Virtual Machine (VMWare Workstation)
+- Ubuntu Operating system
+- Bash Shell Environment
+- AWS S3 Bucket
+
+---
 
 ## Usage
 
@@ -38,7 +49,6 @@ Step-by-step guide to install and set up the script on your local machine includ
 	1. chmod +x ./upload.sh
 4. **Make the script globally accessible**
 	1. sudo mv /path/to/upload.sh /usr/local/bin/upload.sh
-
 ---
 
 ## Contributing
@@ -58,8 +68,7 @@ Contributions are welcome
 
 List any potential features or improvements you plan to add in the future:
 
-- [ ]  Feature 1: Progress bar or percentage upload completion
-- [ ]  Feature 2: Enable file synchronization -- if the file already exists in the cloud, prompt the user to overwrite, skip, or rename
+- [ ]  Feature 1: Enable file synchronization -- if the file already exists in the cloud, prompt the user to overwrite, skip, or rename
 
 ---
 
